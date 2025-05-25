@@ -3,3 +3,11 @@
   gap: 20px;
   height: auto;
 }
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    padding: 15px 0;
+  }
+}

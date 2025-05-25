@@ -1,13 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index.scss";
 
 const Avatar = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    // 在移动设备上，自动显示动画效果
+    if (window.innerWidth <= 768) {
+      setIsHovered(true);
+    }
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
   return (
     <div
       className={`avatar ${isHovered ? "hovered" : ""}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => !isMobile && setIsHovered(true)}
+      onMouseLeave={() => !isMobile && setIsHovered(false)}
+      onTouchStart={() => isMobile && setIsHovered(true)}
     >
       <div className="tech-icons">
         <img className="icon vscode" src="/vscode.svg" alt="VSCode" />

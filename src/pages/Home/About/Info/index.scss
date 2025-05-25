@@ -106,3 +106,41 @@
     line-height: 2;
   }
 }
+@media (max-width: 768px) {
+  .info {
+    padding: 20px;
+    .top {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      .left {
+        gap: 10px;
+        img {
+          width: 40px;
+        }
+        .welcome {
+          .name {
+            font-size: 16px;
+          }
+          .job {
+            font-size: 14px;
+          }
+        }
+      }
+      .right {
+        ul {
+          flex-wrap: wrap;
+          li {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .title {
+      font-size: 24px;
+    }
+    .desc {
+      font-size: 10px;
+    }
+  }
+}

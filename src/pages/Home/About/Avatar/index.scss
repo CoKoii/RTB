@@ -16,6 +16,8 @@
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10;
     transition: transform 0.5s ease;
   }
@@ -84,11 +86,35 @@
     }
 
     .avatar-img {
-      transform: scale(1);
+      transform: translateX(-50%) scale(1);
     }
   }
 }
-
+@media (max-width: 768px) {
+  .avatar {
+    flex: 1;
+    width: 100%;
+    min-height: 80vw;
+    height: auto;
+    background-image: url("/bg2.webp") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    .tech-icons .icon {
+      width: 40px;
+      height: 40px;
+    }
+    .avatar-img {
+      width: 90%;
+      height: auto;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-height: 90%;
+      object-fit: contain;
+    }
+  }
+}
 @keyframes move-float-1 {
   0% {
     transform: translate(-50%, -50%) scale(0.5);
@@ -99,8 +125,12 @@
   60% {
     transform: translate(-280%, -200%) scale(1.5);
   }
-  100% {
+  80% {
     transform: translate(-280%, -180%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
   }
 }
 
@@ -114,8 +144,12 @@
   60% {
     transform: translate(-480%, 230%) scale(1.8);
   }
-  100% {
+  80% {
     transform: translate(-480%, 250%) scale(1.8);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
   }
 }
 
@@ -129,8 +163,12 @@
   60% {
     transform: translate(80%, -200%) scale(1.2);
   }
-  100% {
+  80% {
     transform: translate(80%, -180%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
   }
 }
 
@@ -144,7 +182,11 @@
   60% {
     transform: translate(250%, 160%) scale(1.5);
   }
-  100% {
+  80% {
     transform: translate(250%, 180%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
   }
 }
