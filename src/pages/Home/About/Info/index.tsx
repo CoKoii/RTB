@@ -2,7 +2,16 @@ import "./index.scss";
 const Info = () => {
   return (
     <div className="info">
-      <h1>info</h1>
+      <div className="top">
+        <div className="left">
+          <div className="img"></div>
+          <div className="welcome">
+            <div className="name"></div>
+            <div className="job"></div>
+          </div>
+        </div>
+        <div className="right"></div>
+      </div>
     </div>
   );
 };

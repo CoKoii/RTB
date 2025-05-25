@@ -1,18 +1,14 @@
+import { useContext } from "react";
 import "./index.scss";
+import UserContext from "@/context/UserContext";
 
-interface User {
-  user: {
-    name: string;
-    job: string;
-  };
-}
-
-const Nav = ({ user }: User) => {
+const Nav = () => {
+  const user = useContext(UserContext);
   return (
     <nav className="nav">
       <div className="user">
-        <div className="name">{user.name}</div>
-        <div className="job">{user.job}</div>
+        <div className="name">{user?.name}</div>
+        <div className="job">{user?.job}</div>
       </div>
       <div className="menu">
         <ul>
