@@ -7,10 +7,144 @@
   background-position: center;
   background-color: rgba(0, 0, 0, 0.2);
   background-blend-mode: overlay;
-  img {
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .avatar-img {
     width: 100%;
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    z-index: 10;
+    transition: transform 0.5s ease;
+  }
+
+  .tech-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+
+    .icon {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      opacity: 0;
+      transition: all 0.6s ease;
+      transform: translate(-50%, -50%) scale(0.5);
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      padding: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+      &.github {
+        top: 40%;
+        left: 30%;
+      }
+
+      &.vscode {
+        top: 30%;
+        left: 50%;
+      }
+
+      &.vue {
+        top: 40%;
+        left: 70%;
+      }
+
+      &.react {
+        top: 60%;
+        left: 50%;
+      }
+    }
+  }
+
+  &.hovered {
+    .tech-icons .icon {
+      opacity: 0.85;
+      animation-delay: 0.6s;
+
+      &.github {
+        animation: move-float-1 3s ease-in-out infinite;
+      }
+
+      &.vscode {
+        animation: move-float-2 3.5s ease-in-out infinite;
+      }
+
+      &.vue {
+        animation: move-float-3 2.8s ease-in-out infinite;
+      }
+
+      &.react {
+        animation: move-float-4 3.2s ease-in-out infinite;
+      }
+    }
+
+    .avatar-img {
+      transform: scale(1);
+    }
+  }
+}
+
+@keyframes move-float-1 {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  20% {
+    transform: translate(-280%, -180%) scale(1.5);
+  }
+  60% {
+    transform: translate(-280%, -200%) scale(1.5);
+  }
+  100% {
+    transform: translate(-280%, -180%) scale(1.5);
+  }
+}
+
+@keyframes move-float-2 {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  20% {
+    transform: translate(-480%, 250%) scale(1.8);
+  }
+  60% {
+    transform: translate(-480%, 230%) scale(1.8);
+  }
+  100% {
+    transform: translate(-480%, 250%) scale(1.8);
+  }
+}
+
+@keyframes move-float-3 {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  20% {
+    transform: translate(80%, -180%) scale(1.2);
+  }
+  60% {
+    transform: translate(80%, -200%) scale(1.2);
+  }
+  100% {
+    transform: translate(80%, -180%) scale(1.2);
+  }
+}
+
+@keyframes move-float-4 {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  20% {
+    transform: translate(250%, 180%) scale(1.5);
+  }
+  60% {
+    transform: translate(250%, 160%) scale(1.5);
+  }
+  100% {
+    transform: translate(250%, 180%) scale(1.5);
   }
 }
