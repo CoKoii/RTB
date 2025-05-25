@@ -36,19 +36,19 @@
     transition: all 0.3s ease;
   }
   &:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
   }
   &:hover::before {
     top: -20px;
     right: -20px;
-    border-top: 3px solid rgb(255, 255, 255, 0.6);
-    border-right: 3px solid rgb(255, 255, 255, 0.6);
+    border-top: 2px solid rgb(255, 255, 255, 0.6);
+    border-right: 2px solid rgb(255, 255, 255, 0.6);
   }
   &:hover::after {
     bottom: -20px;
     left: -20px;
-    border-bottom: 3px solid rgb(255, 255, 255, 0.6);
-    border-left: 3px solid rgb(255, 255, 255, 0.6);
+    border-bottom: 2px solid rgb(255, 255, 255, 0.6);
+    border-left: 2px solid rgb(255, 255, 255, 0.6);
   }
   .top {
     display: flex;
