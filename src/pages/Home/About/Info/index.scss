@@ -1,6 +1,108 @@
 .info {
   flex: 6;
-  outline: 1px solid #fff;
   border-radius: 30px;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-image: url("../../../../assets/bg1.webp");
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  background-blend-mode: overlay;
+  background-size: cover;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 15%;
+    border-top: 1px solid rgb(255, 255, 255, 0.15);
+    border-right: 1px solid rgb(255, 255, 255, 0.15);
+    border-top-right-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 15%;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.15);
+    border-left: 1px solid rgb(255, 255, 255, 0.15);
+    border-bottom-left-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  &:hover::before {
+    top: -20px;
+    right: -20px;
+    border-top: 3px solid rgb(255, 255, 255, 0.6);
+    border-right: 3px solid rgb(255, 255, 255, 0.6);
+  }
+  &:hover::after {
+    bottom: -20px;
+    left: -20px;
+    border-bottom: 3px solid rgb(255, 255, 255, 0.6);
+    border-left: 3px solid rgb(255, 255, 255, 0.6);
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      img {
+        width: 48px;
+        border-radius: 50%;
+      }
+      .welcome {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .name {
+          font-weight: 900;
+          font-size: 18px;
+        }
+        .job {
+          opacity: 0.3;
+          font-size: 15px;
+        }
+      }
+    }
+    .right {
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        li {
+          padding: 5px;
+          font-size: 24px;
+          padding: 5px 8px;
+          background-color: rgb(255, 255, 255, 0.1);
+          border-radius: 10px;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(255, 255, 255, 0.2);
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+  .title {
+    font-size: 56px;
+  }
+  .desc {
+    font-size: 16px;
+    opacity: 0.6;
+    line-height: 2;
+  }
 }

@@ -18,7 +18,7 @@ interface UserContextType {
       end: string;
     };
     description: string[];
-  }[];
+  };
 }
 
 const UserContext = createContext<UserContextType | null>(null);

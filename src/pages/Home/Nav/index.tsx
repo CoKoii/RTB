@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import "./index.scss";
 import UserContext from "@/context/UserContext";
+import "./index.scss";
 
 const Nav = () => {
   const user = useContext(UserContext);
