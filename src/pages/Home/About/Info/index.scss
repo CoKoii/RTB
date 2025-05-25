@@ -1,11 +1,11 @@
 .info {
-  flex: 6;
+  flex: 16;
   border-radius: 30px;
   padding: 50px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background-image: url("../../../../assets/bg1.webp");
+  background-image: url("/bg1.webp");
   background-color: rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
   background-blend-mode: overlay;
@@ -18,8 +18,8 @@
     right: 0;
     width: 30%;
     height: 15%;
-    border-top: 1px solid rgb(255, 255, 255, 0.15);
-    border-right: 1px solid rgb(255, 255, 255, 0.15);
+    border-top: 1px solid rgb(255, 255, 255, 0.3);
+    border-right: 1px solid rgb(255, 255, 255, 0.3);
     border-top-right-radius: 20px;
     transition: all 0.3s ease;
   }
@@ -30,8 +30,8 @@
     left: 0;
     width: 30%;
     height: 15%;
-    border-bottom: 1px solid rgb(255, 255, 255, 0.15);
-    border-left: 1px solid rgb(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+    border-left: 1px solid rgb(255, 255, 255, 0.3);
     border-bottom-left-radius: 20px;
     transition: all 0.3s ease;
   }
