@@ -52,6 +52,10 @@
     opacity: 0;
     transition: all 0.5s ease;
 
+    @media (max-width: 768px) {
+      min-height: 30rem; // 移动端减小卡片高度
+    }
+
     &.animate {
       transform: translateY(0);
       opacity: 1;
@@ -105,6 +109,11 @@
     -webkit-backdrop-filter: blur(1px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     max-height: 40%;
+
+    @media (max-width: 768px) {
+      padding: 1rem 1.5rem;
+      max-height: 50%; // 移动端增加内容区域高度占比
+    }
   }
 
   .project-header {
@@ -113,12 +122,22 @@
     align-items: center;
     margin-bottom: 0.8rem;
     width: 100%;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
   }
 
   .project-title-area {
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    @media (max-width: 768px) {
+      flex: 1;
+      min-width: 70%;
+    }
   }
 
   .project-name {
@@ -127,6 +146,10 @@
     margin: 0;
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem; // 移动端减小标题字体
+    }
   }
 
   .view-button {
@@ -181,183 +204,190 @@
     max-width: 90%;
     border-left: 3px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-}
 
-// 项目详情弹窗样式
-.project-detail-modal {
-  .ant-modal-content {
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: #1f1f1f;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.7rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
   }
 
-  .ant-modal-header {
-    padding: 16px 0px;
-    border-bottom: 1px solid #303030;
-    background-color: #1f1f1f;
-  }
+  // 项目详情弹窗样式
+  .project-detail-modal {
+    .ant-modal-content {
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #1f1f1f;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
 
-  .ant-modal-title {
-    color: #fff;
-  }
+    .ant-modal-header {
+      padding: 16px 0px;
+      border-bottom: 1px solid #303030;
+      background-color: #1f1f1f;
+    }
 
-  .ant-modal-close {
-    color: #aaa;
-
-    &:hover {
+    .ant-modal-title {
       color: #fff;
     }
-  }
 
-  .modal-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    .ant-modal-close {
+      color: #aaa;
 
-    .project-modal-name {
-      font-size: 18px;
-      font-weight: 600;
-      color: #fff;
-    }
-  }
-
-  .project-detail-content {
-    padding: 16px 0;
-    color: #e0e0e0;
-  }
-
-  // 项目元信息样式
-  .project-meta {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-    .meta-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .meta-label {
-      color: rgba(255, 255, 255, 0.6) !important;
-      font-size: 14px;
-    }
-
-    .meta-value {
-      color: rgba(255, 255, 255, 0.9) !important;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    @media (max-width: 576px) {
-      flex-direction: column;
-      gap: 12px;
-    }
-  }
-
-  .project-intro,
-  .project-tech {
-    margin-bottom: 24px;
-
-    h4 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #fff;
-
-      .anticon {
-        color: #1890ff;
+      &:hover {
+        color: #fff;
       }
     }
-  }
 
-  .project-intro {
-    .ant-typography {
-      font-size: 14px;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.85) !important;
-      margin-bottom: 16px;
-    }
-  }
+    .modal-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
 
-  .tags-container {
-    margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-
-    .ant-tag {
-      margin-right: 0;
-      padding: 4px 10px;
-      font-size: 12px;
-      border-radius: 4px;
-      background-color: rgba(24, 144, 255, 0.15);
-      border: 1px solid rgba(24, 144, 255, 0.3);
-      color: #1890ff;
-    }
-  }
-
-  .tech-list-item {
-    padding: 8px 12px;
-    border-bottom: none;
-    margin-bottom: 4px;
-    border-radius: 4px;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.05);
+      .project-modal-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+      }
     }
 
-    .item-number {
-      font-weight: 600;
-      color: #1890ff;
-      margin-right: 4px;
-      flex-shrink: 0;
-      display: inline-block;
-      width: 20px;
+    .project-detail-content {
+      padding: 16px 0;
+      color: #e0e0e0;
     }
 
-    .tech-content {
-      flex: 1;
-      color: rgba(255, 255, 255, 0.85) !important;
+    // 项目元信息样式
+    .project-meta {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .meta-label {
+        color: rgba(255, 255, 255, 0.6) !important;
+        font-size: 14px;
+      }
+
+      .meta-value {
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      @media (max-width: 576px) {
+        flex-direction: column;
+        gap: 12px;
+      }
     }
-  }
 
-  .ant-modal-footer {
-    border-top: 1px solid #303030;
-    padding: 16px 24px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 8px;
-    background-color: #1f1f1f;
+    .project-intro,
+    .project-tech {
+      margin-bottom: 24px;
 
-    .ant-btn {
-      margin-left: 0;
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
 
-      &:not(.ant-btn-primary) {
-        background-color: #2a2a2a;
-        border-color: #444;
-        color: #d0d0d0;
-
-        &:hover {
-          background-color: #333;
-          border-color: #555;
-          color: #fff;
+        .anticon {
+          color: #1890ff;
         }
       }
     }
-  }
 
-  // 全局覆盖所有文本颜色
-  .ant-typography,
-  .ant-modal-body,
-  .ant-list-item {
-    color: rgba(255, 255, 255, 0.85) !important;
+    .project-intro {
+      .ant-typography {
+        font-size: 14px;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.85) !important;
+        margin-bottom: 16px;
+      }
+    }
+
+    .tags-container {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      .ant-tag {
+        margin-right: 0;
+        padding: 4px 10px;
+        font-size: 12px;
+        border-radius: 4px;
+        background-color: rgba(24, 144, 255, 0.15);
+        border: 1px solid rgba(24, 144, 255, 0.3);
+        color: #1890ff;
+      }
+    }
+
+    .tech-list-item {
+      padding: 8px 12px;
+      border-bottom: none;
+      margin-bottom: 4px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      .item-number {
+        font-weight: 600;
+        color: #1890ff;
+        margin-right: 4px;
+        flex-shrink: 0;
+        display: inline-block;
+        width: 20px;
+      }
+
+      .tech-content {
+        flex: 1;
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+    }
+
+    .ant-modal-footer {
+      border-top: 1px solid #303030;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      background-color: #1f1f1f;
+
+      .ant-btn {
+        margin-left: 0;
+
+        &:not(.ant-btn-primary) {
+          background-color: #2a2a2a;
+          border-color: #444;
+          color: #d0d0d0;
+
+          &:hover {
+            background-color: #333;
+            border-color: #555;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    // 全局覆盖所有文本颜色
+    .ant-typography,
+    .ant-modal-body,
+    .ant-list-item {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
   }
 }

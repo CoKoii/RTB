@@ -36,7 +36,7 @@ const Avatar = () => {
         <img className="icon vue" src="/vue.svg" alt="Vue" />
         <img className="icon react" src="/react.svg" alt="React" />
       </div>
-      <img className="avatar-img" src="/avatar1.png" alt="" />
+      <img className="avatar-img" src="/avatar1.webp" alt="" />
     </div>
   );
 };
