@@ -1,3 +1,4 @@
+import Github from "../components/Github";
 import About from "./About";
 import Nav from "./Nav";
 import "./index.scss";
@@ -9,6 +10,7 @@ const Home = () => {
       <UserContext.Provider value={UserInfo}>
         <Nav />
         <About />
+        <Github />
       </UserContext.Provider>
     </div>
   );

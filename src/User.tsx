@@ -5,7 +5,7 @@ const UserInfo = {
   photo: "https://q1.qlogo.cn/g?b=qq&nk=2655257336&s=640",
   age: 20,
   gender: "男",
-  experience: "1年",
+  experience: "1",
   status: "在读",
   job: "前端开发工程师",
   education: {

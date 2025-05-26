@@ -34,6 +34,7 @@ const Info = () => {
       </div>
       <h1 className="title">I’m just a fucking front-end developer.</h1>
       <div className="desc">
+        {"工作经历：" + user?.experience + " 年"} <br />
         {user?.education?.school} ｜{user?.education?.major}｜
         {user?.education?.degree} ｜ {user?.education?.time?.start.slice(0, 4)}{" "}
         - {user?.education?.time?.end.slice(0, 4)}
