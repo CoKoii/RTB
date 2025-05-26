@@ -35,7 +35,7 @@ const SkillItem: React.FC<SkillItemProps> = ({
   }, []);
 
   return (
-    <div className="skill-item" id="skill" ref={skillRef}>
+    <div className="skill-item" ref={skillRef}>
       <div className="skill-info">
         <span className="skill-name">{name}</span>
         <span className="skill-percentage">{level}%</span>
@@ -62,7 +62,7 @@ const Skill: React.FC = () => {
   const skillDescriptions = user?.skills.descriptions || [];
 
   return (
-    <div className="skill-section" id="skills">
+    <div className="skill-section" id="skill">
       <h2 className="section-title">专业技能</h2>
       <div className="container">
         <div className="skill-content">

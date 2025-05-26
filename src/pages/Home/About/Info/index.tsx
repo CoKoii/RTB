@@ -5,7 +5,7 @@ import { GithubFilled, PhoneFilled, WechatFilled } from "@ant-design/icons";
 const Info = () => {
   const user = useContext(UserContext);
   return (
-    <div className="info">
+    <div className="info" id="education">
       <div className="top">
         <div className="left">
           <img src={user?.photo} alt="" />

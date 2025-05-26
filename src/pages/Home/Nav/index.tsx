@@ -13,14 +13,19 @@ const Nav = () => {
       <div className="menu">
         <ul>
           <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
             <a href="#education">Education</a>
           </li>
-          <li>Work</li>
           <li>
             <a href="#skill">Skills</a>
+          </li>
+          <li>
+            <a href="#work">Work</a>
+          </li>
+          <li>
+            <a href="#project">Project</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
           </li>
         </ul>
       </div>
