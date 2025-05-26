@@ -22,23 +22,28 @@ const UserInfo = {
     mainSkills: [
       {
         name: "HTML/CSS",
-        level: 90,
+        level: 70,
         gradient: "linear-gradient(90deg, #50fa7b 0%, #8be9fd 100%)",
       },
       {
         name: "JavaScript",
-        level: 85,
+        level: 75,
         gradient: "linear-gradient(90deg, #8be9fd 0%, #bd93f9 100%)",
       },
       {
+        name: "TypeScript",
+        level: 20,
+        gradient: "linear-gradient(90deg, #bd93f9 0%, #ff5555 100%)",
+      },
+      {
         name: "React",
-        level: 85,
+        level: 30,
         gradient: "linear-gradient(90deg, #ff79c6 0%, #bd93f9 100%)",
       },
       {
-        name: "TypeScript",
-        level: 80,
-        gradient: "linear-gradient(90deg, #bd93f9 0%, #ff5555 100%)",
+        name: "Vue.js",
+        level: 60,
+        gradient: "linear-gradient(90deg, #ffb86c 0%, #50fa7b 100%)",
       },
     ],
     descriptions: [

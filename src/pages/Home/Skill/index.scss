@@ -112,7 +112,7 @@
         font-size: 1.2rem;
         color: #fff;
         position: relative;
-        letter-spacing: 0.5px;
+        letter-spacing: 1px;
       }
     }
   }
@@ -127,7 +127,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .skill-section {
     .skill-content {
       flex-direction: column;
@@ -135,6 +135,19 @@
 
     .skill-progress-container {
       margin-bottom: 30px;
+    }
+  }
+  .skill-descriptions {
+    transform: translateY(-90px);
+    overflow: auto;
+    padding: 10px;
+    ul {
+      padding: 0 !important;
+      li {
+        font-size: 0.8rem !important;
+        white-space: nowrap;
+        line-height: 1 !important;
+      }
     }
   }
 }
