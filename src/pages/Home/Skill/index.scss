@@ -130,18 +130,13 @@
   .skill-section {
     .skill-content {
       flex-direction: column;
-    }
-
-    .skill-progress-container {
-      margin-bottom: 30px;
+      gap: 0px;
     }
   }
   .skill-descriptions {
-    transform: translateY(-90px);
     overflow: auto;
-    padding: 10px;
     ul {
-      padding: 0 !important;
+      padding: 15px !important;
       li {
         font-size: 0.8rem !important;
         white-space: nowrap;
