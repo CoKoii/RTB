@@ -6,6 +6,7 @@ import UserInfo from "@/User";
 import UserContext from "@/context/UserContext";
 import Skill from "./Skill";
 import Work from "./Works";
+import Projects from "./Projects";
 const Home = () => {
   return (
     <div className="home">
@@ -15,6 +16,7 @@ const Home = () => {
         <Github />
         <Skill />
         <Work />
+        <Projects />
       </UserContext.Provider>
     </div>
   );

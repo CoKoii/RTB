@@ -38,6 +38,23 @@ interface UserContextType {
       coordinates: string; // 经度,纬度
     };
   }[];
+  // 新增项目相关的类型定义
+  projects: {
+    id: number;
+    name: string;
+    status: string;
+    description: string;
+    darkColor: string;
+    link: string;
+    bgImage?: string;
+    details: {
+      intro: string;
+      tech: string[];
+      tags: string[];
+      period: string;
+      role: string;
+    };
+  }[];
 }
 
 const UserContext = createContext<UserContextType | null>(null);
