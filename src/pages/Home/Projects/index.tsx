@@ -190,14 +190,12 @@ const Projects = () => {
     if (!userInfo?.projects?.length) return;
 
     const fetchScreenshots = async () => {
-      const updatedProjects = await Promise.all(
-        userInfo.projects.map(async (project) => ({
-          ...project,
-          bgImage: `https://s0.wp.com/mshots/v1/${encodeURIComponent(
-            project.link
-          )}`,
-        }))
-      );
+      const updatedProjects = userInfo.projects.map((project) => ({
+        ...project,
+        bgImage: `https://s0.wp.com/mshots/v1/${encodeURIComponent(
+          project.link
+        )}`,
+      }));
       setProjects(updatedProjects);
     };
 
@@ -207,10 +205,6 @@ const Projects = () => {
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
     setModalVisible(true);
-  };
-
-  const handleModalClose = () => {
-    setModalVisible(false);
   };
 
   // 如果用户信息未加载，显示加载状态
@@ -235,7 +229,7 @@ const Projects = () => {
       <ProjectDetailModal
         visible={modalVisible}
         project={selectedProject}
-        onClose={handleModalClose}
+        onClose={() => setModalVisible(false)}
       />
     </div>
   );
