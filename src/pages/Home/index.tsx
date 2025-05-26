@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import "./index.scss";
 import UserInfo from "@/User";
 import UserContext from "@/context/UserContext";
+import Skill from "./Skill";
 const Home = () => {
   return (
     <div className="home">
@@ -11,6 +12,7 @@ const Home = () => {
         <Nav />
         <About />
         <Github />
+        <Skill />
       </UserContext.Provider>
     </div>
   );

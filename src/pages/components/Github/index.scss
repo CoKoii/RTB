@@ -1,0 +1,15 @@
+.github-container {
+  width: 100%;
+  overflow: auto;
+  img {
+    min-width: 100%;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .github-container {
+    img {
+      margin-top: 0px;
+    }
+  }
+}

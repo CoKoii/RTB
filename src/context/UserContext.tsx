@@ -19,6 +19,14 @@ interface UserContextType {
     };
     description: string[];
   };
+  skills: {
+    mainSkills: {
+      name: string;
+      level: number;
+      gradient: string;
+    }[];
+    descriptions: string[];
+  };
 }
 
 const UserContext = createContext<UserContextType | null>(null);
