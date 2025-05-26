@@ -173,9 +173,6 @@ const ProjectCard = ({
               }}
             />
           </div>
-          {project.status && (
-            <span className="project-status">{project.status}</span>
-          )}
         </div>
         <p className="project-description">{project.description}</p>
       </div>
