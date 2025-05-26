@@ -11,7 +11,6 @@ import "./index.scss";
 
 const { Title, Paragraph, Text } = Typography;
 
-// 定义项目详情类型
 interface ProjectDetail {
   period: string;
   role: string;
@@ -20,7 +19,6 @@ interface ProjectDetail {
   tech: string[];
 }
 
-// 定义项目类型
 interface Project {
   id: string | number;
   name: string;
@@ -32,7 +30,6 @@ interface Project {
   details: ProjectDetail;
 }
 
-// 项目详情弹窗属性类型
 interface ProjectDetailModalProps {
   visible: boolean;
   project: Project | null;
@@ -187,7 +184,6 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
-  // 使用 useContext 获取用户数据
   const userInfo = useContext(UserContext);
   const [projects, setProjects] = useState<Project[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -196,7 +192,6 @@ const Projects = () => {
   useEffect(() => {
     if (!userInfo?.projects?.length) return;
 
-    // 从用户上下文获取项目数据
     const fetchScreenshots = async () => {
       const updatedProjects = await Promise.all(
         userInfo.projects.map(async (project) => ({

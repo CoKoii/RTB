@@ -81,7 +81,7 @@ const UserInfo = {
       status: "进行中",
       description: "商铺安全隐患排查与可视化平台，支持5000+商户管理。",
       darkColor: "#7048e8",
-      link: "https://www.youtube.com",
+      link: "https://ksnd.nexinfo.cn/safety/user/login",
       details: {
         intro:
           "为昆山高新区部门开发全域商铺安全隐患排查平台，覆盖5000+商户管理，实现隐患上报、整改跟踪、数据可视化闭环。",
