@@ -27,6 +27,17 @@ interface UserContextType {
     }[];
     descriptions: string[];
   };
+  workExperiences: {
+    id: number;
+    company: string;
+    position: string;
+    period: string;
+    description: string[];
+    location: {
+      address: string;
+      coordinates: string; // 经度,纬度
+    };
+  }[];
 }
 
 const UserContext = createContext<UserContextType | null>(null);

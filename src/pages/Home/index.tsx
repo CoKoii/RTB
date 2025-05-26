@@ -5,6 +5,7 @@ import "./index.scss";
 import UserInfo from "@/User";
 import UserContext from "@/context/UserContext";
 import Skill from "./Skill";
+import Work from "./Works";
 const Home = () => {
   return (
     <div className="home">
@@ -13,6 +14,7 @@ const Home = () => {
         <About />
         <Github />
         <Skill />
+        <Work />
       </UserContext.Provider>
     </div>
   );

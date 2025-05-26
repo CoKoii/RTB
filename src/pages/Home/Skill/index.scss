@@ -10,21 +10,20 @@
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 40px;
     font-weight: 600;
     color: #fff;
     position: relative;
-    padding-bottom: 10px;
+    padding-left: 40px;
+    transition: transform 0.3s ease;
 
-    &:after {
-      content: "";
+    &:before {
+      content: "#";
       position: absolute;
-      bottom: 0;
       left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: rgba(255, 255, 255, 0.1);
+      color: #a64dff;
+      font-weight: bold;
     }
   }
 

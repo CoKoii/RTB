@@ -63,9 +63,8 @@ const Skill: React.FC = () => {
 
   return (
     <div className="skill-section" id="skills">
+      <h2 className="section-title">专业技能</h2>
       <div className="container">
-        <h2 className="section-title">专业技能</h2>
-
         <div className="skill-content">
           <div className="skill-progress-container">
             {mainSkillsData.map((skill, index) => (

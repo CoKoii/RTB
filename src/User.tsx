@@ -56,6 +56,53 @@ const UserInfo = {
       "服务端: 熟悉使用Java/Mysql/Springboot、了解docker部署",
     ],
   },
+  workExperiences: [
+    {
+      id: 1,
+      company: "科技有限公司",
+      position: "前端开发实习生",
+      period: "2022.06 - 2022.09",
+      description: [
+        "负责公司主要产品的前端页面开发和维护",
+        "使用React、TypeScript开发新功能模块，提升用户体验",
+        "参与需求评审和UI设计讨论，优化前端架构",
+      ],
+      location: {
+        address: "上海市浦东新区张江高科技园区",
+        coordinates: "120.838,31.117",
+      },
+    },
+    {
+      id: 2,
+      company: "互联网科技有限公司",
+      position: "全栈开发实习生",
+      period: "2023.01 - 2023.04",
+      description: [
+        "参与电商平台核心功能开发，使用Vue.js构建用户界面",
+        "使用Node.js开发服务端API，对接数据库和第三方服务",
+        "独立负责多个页面的性能优化，提升加载速度30%",
+      ],
+      location: {
+        address: "北京市海淀区中关村软件园",
+        coordinates: "116.307673,40.042976",
+      },
+    },
+    {
+      id: 3,
+      company: "创新科技有限公司",
+      position: "前端开发工程师",
+      period: "2023.07 - 至今",
+      description: [
+        "负责公司核心产品的前端架构设计和开发",
+        "使用React、Redux管理复杂状态，实现高性能用户界面",
+        "带领前端小组完成多个关键项目，提升团队开发效率",
+      ],
+      location: {
+        address: "深圳市南山区科技园",
+        coordinates: "113.944158,22.528763",
+      },
+    },
+  ],
 };
 
 export default UserInfo;
