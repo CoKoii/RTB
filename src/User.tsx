@@ -70,7 +70,7 @@ const UserInfo = {
       ],
       location: {
         address: "江苏省苏州市昆山市",
-        coordinates: "120.980737,31.385598",
+        coordinates: "120.845315,31.146251",
       },
     },
   ],

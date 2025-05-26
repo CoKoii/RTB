@@ -61,7 +61,7 @@ const Work = () => {
 
             <div className="location-map">
               <img
-                src={`https://restapi.amap.com/v3/staticmap?location=${currentWork.location.coordinates}&scale=2&zoom=17&size=750*300&markers=mid,,A:${currentWork.location.coordinates}&key=${mapKey}`}
+                src={`https://restapi.amap.com/v3/staticmap?location=${currentWork.location.coordinates}&scale=2&zoom=12&size=750*300&markers=mid,,A:${currentWork.location.coordinates}&key=${mapKey}`}
                 alt={`${currentWork.company}地图位置`}
               />
             </div>
