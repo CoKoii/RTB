@@ -1,4 +1,4 @@
-import Github from "../components/Github";
+import Github from "@/components/Github/index";
 import About from "./About";
 import Nav from "./Nav";
 import "./index.scss";
