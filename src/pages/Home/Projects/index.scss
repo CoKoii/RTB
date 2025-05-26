@@ -29,7 +29,7 @@
   .project-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 3rem;
     margin: 0 auto;
 
     @media (max-width: 768px) {
@@ -38,22 +38,24 @@
   }
 
   .project-card {
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     overflow: hidden;
     position: relative;
-    min-height: 40rem;
-    transition: all 0.3s ease;
+    min-height: 42rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     background-size: cover;
     background-position: center top;
     cursor: pointer;
     transform: translateY(20px);
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
     @media (max-width: 768px) {
-      min-height: 25rem;
+      min-height: 28rem;
     }
 
     &.animate {
@@ -62,21 +64,38 @@
     }
 
     &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
 
       .card-overlay {
-        opacity: 0.1;
+        opacity: 0.15;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.1)
+        );
       }
 
       .project-content {
-        background-color: rgba(30, 30, 40, 0.3);
+        background-color: rgba(25, 25, 35, 0.75);
+        max-height: 50%;
+        backdrop-filter: blur(10px);
       }
 
       .view-button {
-        transform: scale(1.1);
+        transform: rotate(45deg) scale(1.1);
         background-color: #1890ff;
         color: white;
+      }
+
+      .project-name {
+        transform: translateY(-5px);
+      }
+
+      .project-description {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 200px;
       }
     }
   }
@@ -87,9 +106,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     z-index: 1;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     pointer-events: none;
   }
 
@@ -98,16 +117,16 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 1.5rem 2rem;
+    padding: 2rem 2.5rem;
     z-index: 2;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: rgba(30, 30, 40, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(1px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(25, 25, 35, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     max-height: 40%;
   }
 
@@ -115,62 +134,70 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     width: 100%;
   }
 
   .project-title-area {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
+    width: 100%;
   }
 
   .project-name {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 700;
     margin: 0;
     color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: -0.02em;
   }
 
   .view-button {
-    width: 2rem;
-    height: 2rem;
-    background-color: rgba(255, 255, 255, 0.15);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    transition: all 0.2s ease;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
     padding: 0;
+    margin-left: auto;
 
     &:hover {
       background-color: #1890ff;
-      transform: scale(1.1);
+      transform: rotate(45deg) scale(1.2);
       color: white;
+      box-shadow: 0 6px 20px rgba(24, 144, 255, 0.4);
     }
   }
 
   .project-description {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.6rem 0.8rem;
-    border-radius: 0.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 1rem 1.2rem;
+    border-radius: 0.8rem;
     display: inline-block;
-    max-width: 90%;
-    border-left: 3px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-left: 3px solid rgba(24, 144, 255, 0.6);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0.9;
+    transform: translateY(5px);
+    overflow: hidden;
+    max-height: 0;
   }
 }
 
