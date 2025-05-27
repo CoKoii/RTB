@@ -41,14 +41,14 @@
   &:hover::before {
     top: -20px;
     right: -20px;
-    border-top: 2px solid rgb(255, 255, 255, 0.6);
-    border-right: 2px solid rgb(255, 255, 255, 0.6);
+    border-top: 5px solid rgb(255, 255, 255, 0.7);
+    border-right: 5px solid rgb(255, 255, 255, 0.7);
   }
   &:hover::after {
     bottom: -20px;
     left: -20px;
-    border-bottom: 2px solid rgb(255, 255, 255, 0.6);
-    border-left: 2px solid rgb(255, 255, 255, 0.6);
+    border-bottom: 5px solid rgb(255, 255, 255, 0.7);
+    border-left: 5px solid rgb(255, 255, 255, 0.7);
   }
   .top {
     display: flex;
