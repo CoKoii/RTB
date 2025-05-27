@@ -207,7 +207,6 @@ const Projects = () => {
     setModalVisible(true);
   };
 
-  // 如果用户信息未加载，显示加载状态
   if (!userInfo) {
     return <div>加载中...</div>;
   }
