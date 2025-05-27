@@ -13,19 +13,16 @@ const Nav = () => {
       <div className="menu">
         <ul>
           <li>
-            <a href="#education">Education</a>
+            <a href="#education">教育经历</a>
           </li>
           <li>
-            <a href="#skill">Skills</a>
+            <a href="#skill">专业技能</a>
           </li>
           <li>
-            <a href="#work">Work</a>
+            <a href="#work">工作经历</a>
           </li>
           <li>
-            <a href="#project">Project</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
+            <a href="#project">项目经历</a>
           </li>
         </ul>
       </div>
