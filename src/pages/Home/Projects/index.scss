@@ -13,6 +13,12 @@
     text-align: left;
     transition: transform 0.3s ease;
 
+    @media (max-width: 768px) {
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+      padding-left: 30px;
+    }
+
     &:before {
       content: "#";
       position: absolute;
@@ -131,6 +137,10 @@
     margin: 0;
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+    }
   }
 
   .view-button {
@@ -149,6 +159,12 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     font-size: 0.9rem;
     padding: 0;
+
+    @media (max-width: 768px) {
+      width: 1.8rem;
+      height: 1.8rem;
+      font-size: 0.8rem;
+    }
 
     &:hover {
       background-color: #1890ff;
@@ -171,6 +187,12 @@
     max-width: 90%;
     border-left: 3px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px) {
+      font-size: 0.85rem;
+      padding: 0.5rem 0.6rem;
+      max-width: 95%;
+    }
   }
 }
 
