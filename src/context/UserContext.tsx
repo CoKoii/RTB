@@ -45,6 +45,7 @@ interface UserContextType {
     status: string;
     description: string;
     darkColor: string;
+    coverImage?: string;
     link: string;
     bgImage?: string;
     details: {

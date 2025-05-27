@@ -81,6 +81,7 @@ const UserInfo = {
       status: "进行中",
       description: "商铺安全隐患排查与可视化平台，支持5000+商户管理。",
       darkColor: "#7048e8",
+      coverImage: "/safe_project.webp",
       link: "https://ksnd.nexinfo.cn/safety/user/login",
       details: {
         intro:
@@ -106,12 +107,44 @@ const UserInfo = {
     },
     {
       id: 2,
+      name: "RTB - 简历到博客",
+      status: "进行中",
+      description: "在线编辑预览简历，根据简历自动生成博客",
+      darkColor: "#6E10CC",
+      coverImage: "",
+      link: "https://rtb.caok.top",
+      details: {
+        intro:
+          "基于React与TypeScript开发的个人简历和技术博客结合的展示平台，采用现代前端技术栈实现响应式设计，支持项目展示、技能展示和工作经历等多维度内容展示，为个人提供专业形象的在线简历与作品集。",
+        tech: [
+          "技术选型：使用React 19 + TypeScript + Vite构建项目，实现高性能渲染与类型安全开发",
+          "响应式设计：采用SCSS预处理器与Flex/Grid布局，实现全设备适配，优化移动端用户体验",
+          "组件封装：基于Ant Design组件库进行二次封装，打造统一风格的UI界面与交互效果",
+          "状态管理：使用React Context API管理全局状态，避免组件间的props层层传递",
+          "路由配置：基于React Router实现单页应用路由管理，优化页面切换体验",
+          "动画效果：结合CSS动画与React hooks实现平滑过渡效果，提升用户体验",
+          "性能优化：使用组件懒加载、代码分割等技术优化首屏加载速度，提升性能表现",
+        ],
+        tags: [
+          "React",
+          "TypeScript",
+          "Vite",
+          "Ant Design",
+          "SCSS",
+          "响应式设计",
+        ],
+        period: "2025年5月",
+        role: "全栈开发",
+      },
+    },
+    {
+      id: 3,
       name: "GU物料管理系统",
       status: "已完成",
-      description:
-        "企业级数字化物料管理系统，实现多角色权限控制与流转记录可视化。",
+      description: "企业级数字化物料系统，多角色权限控制与流转记录可视化。",
       darkColor: "#5571ee",
-      link: "https://v2.vben.pro/#/login?redirect=/dashboard",
+      coverImage: "/gu_project.webp",
+      link: "",
       details: {
         intro:
           "面向企业内部人员和合作客户，提供数据存储、处理、可视化全流程管理的数字化平台，支持PC端与App协同办公，实现可视化权限管理、角色权限控制、数据流转日志审计等功能。",

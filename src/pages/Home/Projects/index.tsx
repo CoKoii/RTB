@@ -26,6 +26,7 @@ interface Project {
   link: string;
   status?: string;
   darkColor: string;
+  coverImage?: string;
   bgImage?: string;
   details: ProjectDetail;
 }
@@ -57,16 +58,20 @@ const ProjectDetailModal = ({
         <Button key="close" onClick={onClose}>
           关闭
         </Button>,
-        <Button
-          key="visit"
-          type="primary"
-          icon={<LinkOutlined />}
-          onClick={() =>
-            window.open(project.link, "_blank", "noopener,noreferrer")
-          }
-        >
-          访问网站
-        </Button>,
+        project.link ? (
+          <Button
+            key="visit"
+            type="primary"
+            icon={<LinkOutlined />}
+            onClick={() =>
+              window.open(project.link, "_blank", "noopener,noreferrer")
+            }
+          >
+            访问网站
+          </Button>
+        ) : (
+          ""
+        ),
       ]}
       width={700}
       className="project-detail-modal"
@@ -189,17 +194,26 @@ const Projects = () => {
   useEffect(() => {
     if (!userInfo?.projects?.length) return;
 
-    const fetchScreenshots = async () => {
-      const updatedProjects = userInfo.projects.map((project) => ({
-        ...project,
-        bgImage: `https://s0.wp.com/mshots/v1/${encodeURIComponent(
-          project.link
-        )}`,
-      }));
+    const getProjects = async () => {
+      const updatedProjects = userInfo.projects.map((project) => {
+        let bgImage;
+        if (project.coverImage) {
+          bgImage = project.coverImage;
+        } else if (project.link) {
+          bgImage = `https://s0.wp.com/mshots/v1/${encodeURIComponent(
+            project.link
+          )}`;
+        }
+
+        return {
+          ...project,
+          bgImage,
+        };
+      });
       setProjects(updatedProjects);
     };
 
-    fetchScreenshots();
+    getProjects();
   }, [userInfo]);
 
   const handleProjectClick = (project: Project) => {

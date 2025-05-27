@@ -44,22 +44,22 @@
   }
 
   .project-card {
+    border: 1px solid rgba(127, 61, 255, 0.3);
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
-    min-height: 35rem;
+    min-height: 32rem;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     background-size: cover;
-    background-position: center top;
+    background-position: center center;
     cursor: pointer;
     transform: translateY(20px);
     opacity: 0;
     transition: all 0.5s ease;
     @media (max-width: 768px) {
-      min-height: 25rem;
+      min-height: 20rem;
     }
 
     &.animate {
@@ -69,19 +69,18 @@
 
     &:hover {
       transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 
       .card-overlay {
         opacity: 0.1;
       }
 
       .project-content {
-        background-color: rgba(30, 30, 40, 0.3);
+        background-color: rgba(30, 30, 40, 0.6);
       }
 
       .view-button {
         transform: scale(1.1);
-        background-color: #1890ff;
+        background-color: #8c3bc8;
         color: white;
       }
     }
@@ -93,7 +92,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
     z-index: 1;
     transition: all 0.3s ease;
     pointer-events: none;
@@ -104,17 +102,17 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1rem;
     z-index: 2;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: rgba(30, 30, 40, 0.1);
-    backdrop-filter: blur(5px);
+    background-color: rgba(30, 30, 40, 0.2);
+    backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    max-height: 40%;
+    max-height: 80%;
   }
 
   .project-header {
@@ -139,7 +137,7 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
     @media (max-width: 768px) {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -187,6 +185,9 @@
     max-width: 90%;
     border-left: 3px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @media (max-width: 768px) {
       font-size: 0.85rem;
