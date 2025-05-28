@@ -24,6 +24,9 @@ const Nav = () => {
           <li>
             <a href="#project">项目经历</a>
           </li>
+          <li>
+            <a href="#about">个人简介</a>
+          </li>
         </ul>
       </div>
     </nav>
