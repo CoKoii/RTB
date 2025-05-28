@@ -1,0 +1,18 @@
+.footer {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    padding-left: 40px;
+    transition: transform 0.3s ease;
+    &:before {
+      content: "#";
+      position: absolute;
+      left: 0;
+      color: #a64dff;
+      font-weight: bold;
+    }
+  }
+}

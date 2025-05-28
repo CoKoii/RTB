@@ -13,12 +13,6 @@
     text-align: left;
     transition: transform 0.3s ease;
 
-    @media (max-width: 768px) {
-      font-size: 1.6rem;
-      margin-bottom: 30px;
-      padding-left: 30px;
-    }
-
     &:before {
       content: "#";
       position: absolute;
@@ -197,7 +191,6 @@
   }
 }
 
-// 项目详情弹窗样式
 .project-detail-modal {
   .ant-modal-content {
     border-radius: 12px;
@@ -241,7 +234,6 @@
     color: #e0e0e0;
   }
 
-  // 项目元信息样式
   .project-meta {
     display: flex;
     gap: 24px;
@@ -367,7 +359,6 @@
     }
   }
 
-  // 全局覆盖所有文本颜色
   .ant-typography,
   .ant-modal-body,
   .ant-list-item {
