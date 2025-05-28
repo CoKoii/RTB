@@ -227,7 +227,7 @@ const Projects = () => {
 
   return (
     <div id="project" className="projects-container">
-      <h2 className="section-title">项目展示</h2>
+      <h2 className="section-title">项目经历</h2>
 
       <div className="project-grid">
         {projects.map((project) => (
