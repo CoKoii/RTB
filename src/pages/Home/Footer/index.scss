@@ -1,4 +1,5 @@
 .footer {
+  margin-bottom: 50px;
   .section-title {
     font-size: 2rem;
     margin-bottom: 40px;
@@ -13,6 +14,26 @@
       left: 0;
       color: #a64dff;
       font-weight: bold;
+    }
+  }
+  ul {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 2;
+    padding: 0 30px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-bottom: 30px;
+    ul {
+      font-size: 14px;
+      padding: 0 20px;
     }
   }
 }

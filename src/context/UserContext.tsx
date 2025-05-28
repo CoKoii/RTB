@@ -9,6 +9,7 @@ interface UserContextType {
   experience: string;
   status: string;
   job: string;
+  about: string[]; // 新增个人简介数组
   education: {
     school: string;
     major: string;
