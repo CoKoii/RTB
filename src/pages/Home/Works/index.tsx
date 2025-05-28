@@ -11,6 +11,11 @@ const Work = () => {
   }
 
   const { workExperiences } = userInfo;
+
+  if (!workExperiences || workExperiences.length === 0) {
+    return "";
+  }
+
   const currentWork = workExperiences[activeIndex];
   const mapKey = "f704ecbf48300d061c148b72441b4f08";
 
