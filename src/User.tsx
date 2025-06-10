@@ -144,12 +144,12 @@ const UserInfo = {
     },
     {
       id: 3,
-      name: "GU物料管理系统",
+      name: "格屋客户订单系统",
       status: "已完成",
       description: "企业级数字化物料系统，多角色权限控制与流转记录可视化。",
       darkColor: "#5571ee",
       coverImage: "/gu_project.webp",
-      link: "",
+      link: "http://139.196.108.216/guplus",
       details: {
         intro:
           "面向企业内部人员和合作客户，提供数据存储、处理、可视化全流程管理的数字化平台，支持PC端与App协同办公，实现可视化权限管理、角色权限控制、数据流转日志审计等功能。",
