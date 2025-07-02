@@ -86,7 +86,7 @@ const UserInfo = {
       status: "进行中",
       description: "商铺安全隐患排查与可视化平台，支持5000+商户管理。",
       darkColor: "#7048e8",
-      coverImage: "/safe_project.webp",
+      coverImage: "./safe_project.webp",
       link: "https://ksnd.nexinfo.cn/safety/user/login",
       details: {
         intro:
@@ -148,7 +148,7 @@ const UserInfo = {
       status: "已完成",
       description: "企业级数字化物料系统，多角色权限控制与流转记录可视化。",
       darkColor: "#5571ee",
-      coverImage: "/gu_project.webp",
+      coverImage: "./gu_project.webp",
       link: "http://139.196.108.216/guplus",
       details: {
         intro:
