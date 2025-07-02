@@ -25,10 +25,12 @@ jobs:
       - name: Build Vite project
         run: npm run build
 
+      - name: Copy index.html to 404.html for GitHub Pages history mode
+        run: cp ./docs/index.html ./docs/404.html
+
       - name: Commit and push docs/
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add docs
-          git commit -m "auto: update docs via GitHub Actions" || echo "No changes to commit"
-          git push
+          git commit -m "auto: update d
