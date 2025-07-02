@@ -117,7 +117,7 @@ const UserInfo = {
       description: "在线编辑预览简历，根据简历自动生成博客",
       darkColor: "#6E10CC",
       coverImage: "",
-      link: "https://rtb.caok.top",
+      link: "https://cokoii.github.io/RTB/",
       details: {
         intro:
           "基于React与TypeScript开发的个人简历和技术博客结合的展示平台，采用现代前端技术栈实现响应式设计，支持项目展示、技能展示和工作经历等多维度内容展示，为个人提供专业形象的在线简历与作品集。",

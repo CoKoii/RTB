@@ -31,12 +31,12 @@ const Avatar = () => {
       onTouchStart={() => isMobile && setIsHovered(true)}
     >
       <div className="tech-icons">
-        <img className="icon vscode" src="/vscode.svg" alt="VSCode" />
-        <img className="icon github" src="/github.svg" alt="GitHub" />
-        <img className="icon vue" src="/vue.svg" alt="Vue" />
-        <img className="icon react" src="/react.svg" alt="React" />
+        <img className="icon vscode" src="./vscode.svg" alt="VSCode" />
+        <img className="icon github" src="./github.svg" alt="GitHub" />
+        <img className="icon vue" src="./vue.svg" alt="Vue" />
+        <img className="icon react" src="./react.svg" alt="React" />
       </div>
-      <img className="avatar-img" src="/avatar1.webp" alt="" />
+      <img className="avatar-img" src="./avatar1.webp" alt="" />
     </div>
   );
 };
