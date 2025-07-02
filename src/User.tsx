@@ -173,6 +173,33 @@ const UserInfo = {
         role: "前端开发",
       },
     },
+    {
+      id: 4,
+      name: "VoidUI组件库",
+      status: "进行中",
+      description: "构建 Vue + TS 的现代组件库，提供统一UI设计与高复用组件",
+      darkColor: "#4e8cff",
+      coverImage: "",
+      link: "https://cokoii.github.io/VoidUI",
+      details: {
+        intro:
+          "开发 VoidUI 前端组件库，提供统一的 UI 设计规范和可复用组件，覆盖 Button、Icon、Table 等核心组件，实现开发标准化、提升开发者效率。",
+        tech: [
+          "Vue",
+          "TypeScript",
+          "Vite",
+          "Composition API",
+          "Shiki 高亮",
+          "CodePreview",
+          "GitHub Pages",
+          "CI/CD",
+          "Sass",
+        ],
+        tags: ["组件库", "开发规范", "自动部署", "文档系统"],
+        period: "2025-07 - 至今",
+        role: "前端开发",
+      },
+    },
   ],
 };
 
