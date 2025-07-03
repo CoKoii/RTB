@@ -13,19 +13,69 @@ const Nav = () => {
       <div className="menu">
         <ul>
           <li>
-            <a href="#education">教育经历</a>
+            <a
+              href="#education"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("education")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              教育经历
+            </a>
           </li>
           <li>
-            <a href="#skill">专业技能</a>
+            <a
+              href="#skill"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("skill")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              专业技能
+            </a>
           </li>
           <li>
-            <a href="#work">工作经历</a>
+            <a
+              href="#work"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("work")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              工作经历
+            </a>
           </li>
           <li>
-            <a href="#project">项目经历</a>
+            <a
+              href="#project"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("project")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              项目经历
+            </a>
           </li>
           <li>
-            <a href="#about">个人简介</a>
+            <a
+              href="#about"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("about")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              个人简介
+            </a>
           </li>
         </ul>
       </div>
